@@ -1,3 +1,5 @@
+import 'package:bmi_calculator/widgets/background_shape_left.dart';
+import 'package:bmi_calculator/widgets/background_shape_right.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,21 +16,15 @@ class Application extends StatelessWidget {
       theme: ThemeData(fontFamily: 'dana'),
       home: Scaffold(
         body: SafeArea(
-          child: Center(
-            child: Container(
-              height: 200,
-              width: 200,
-              decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-              ),
-              child: Center(child: Text('Test')),
-            ),
+          child: Column(
+            children: [
+              RightShape(width: 180),
+              RightShape(width: 190),
+              RightShape(width: 210),
+              LeftShape(width: 200),
+              LeftShape(width: 210),
+              LeftShape(width: 220),
+            ],
           ),
         ),
       ),
