@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/constants/constants.dart';
 import 'package:bmi_calculator/widgets/background_shape_left.dart';
 import 'package:bmi_calculator/widgets/background_shape_right.dart';
 import 'package:flutter/material.dart';
@@ -15,15 +16,36 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'dana'),
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: true,
+          title: Text(
+            'تو چنده ؟ BMI',
+            style: TextStyle(fontFamily: 'dana', color: black),
+          ),
+        ),
         body: SafeArea(
           child: Column(
             children: [
-              RightShape(width: 180),
-              RightShape(width: 190),
-              RightShape(width: 210),
-              LeftShape(width: 200),
-              LeftShape(width: 210),
-              LeftShape(width: 220),
+              Container(
+                width: 300,
+                child: TextField(
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                    color: orangeBackground,
+                  ),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'وزن',
+                    hintStyle: TextStyle(
+                      color: orangeBackground.withValues(alpha: 0.5),
+                    ),
+                  ),
+                  keyboardType: TextInputType.number,
+                ),
+              ),
             ],
           ),
         ),
