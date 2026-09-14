@@ -15,9 +15,11 @@ class LeftShape extends StatelessWidget {
           width: width,
           decoration: BoxDecoration(
             color: greenBackground,
-            borderRadius: BorderRadius.only(topRight: Radius.circular(20)),
+            borderRadius: BorderRadius.only(bottomRight: Radius.circular(20)),
           ),
         ),
+        SizedBox(width: 5.0),
+        Text('شاخص مثبت', style: TextStyle(color: Colors.green)),
       ],
     );
   }

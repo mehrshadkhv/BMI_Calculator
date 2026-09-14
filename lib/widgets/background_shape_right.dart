@@ -9,12 +9,14 @@ class RightShape extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
+        Text('شاخص  منفی', style: TextStyle(color: Colors.red)),
+        SizedBox(width: 5.0),
         Container(
           height: 40,
           width: width,
           decoration: BoxDecoration(
             color: Colors.red,
-            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20)),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(20)),
           ),
         ),
       ],
