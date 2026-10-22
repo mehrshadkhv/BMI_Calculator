@@ -1,0 +1,12 @@
+# Keep GitHub language statistics focused on handwritten Dart source.
+# Platform runners remain available; these attributes only affect Linguist.
+android/** linguist-vendored=true
+ios/** linguist-vendored=true
+web/** linguist-vendored=true
+linux/** linguist-vendored=true
+macos/** linguist-vendored=true
+windows/** linguist-vendored=true
+
+# Generated Dart code is excluded from statistics and collapsed in GitHub diffs.
+*.g.dart linguist-generated=true
+*.freezed.dart linguist-generated=true
